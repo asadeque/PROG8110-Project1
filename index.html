@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>INFO8110 INDIVIDUAL PROJECT</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
+		<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+		<link rel="stylesheet" href="vendor/wow/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+				<style>
+					/* Prevent FOUC */
+					body { opacity: 0; }
+				</style>
+
+	</head>
+	<body class="clr-accent-lime">
+	<div>
+		<div data-role="page" class="nd2-no-menu-swipe">
+			<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+			<div data-role="header" data-position="fixed" class="wow fadeIn">
+				<a href="#" class="ui-btn ui-btn-left"><i class="zmdi zmdi-menu"></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Hotel Marriott</h1>
+				<ul data-role="nd2tabs" data-swipe="true">
+					<li data-tab="security" data-tab-active="true">Login</li>
+					<li data-tab="work" data-tab-active="true">Rooms</li>
+					<li data-tab="friends">Customers</li>
+					<li data-tab="colors">Payment</li>
+					<li data-tab="food">Fitness</li>
+					<!--<li data-tab="colors">Desserts</li>-->
+				</ul>
+			</div>
+			<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+					<div data-role="nd2tab"
+								data-tab="security">
+						  <div data-role="main" class="ui-content">
+							<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Show Login Form</a>
+							<div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+							  <form method="post" action="demoform.asp">
+								<div>
+								  <h3>Login information</h3>
+								  <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+								  <input type="text" name="user" id="usrnm" placeholder="Username">
+								  <label for="pswd" class="ui-hidden-accessible">Password:</label>
+								  <input type="password" name="passw" id="pswd" placeholder="Password">
+								  <label for="log">Keep me logged in</label>
+								  <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+								  <form action="index.html">
+										<input type="submit" data-inline="true" value="Log in">
+								  </form>
+								  <a href="#" class="ui-btn" data-rel="back">Cancel</a>
+								</div>
+							  </form>
+							</div>
+						  </div>
+									<ul data-role="listview" data-icon="false">
+										<li data-role="list-divider">Locations : </li>
+										<li>
+											<a href="#">
+												<img src=".\img\login\toronto.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+												<h2>Toronto</h2>
+												<p>toronto.ex@example.com</p>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src=".\img\login\vancouver.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+												<h2>Vancouver</h2>
+												<p>vancouver.ex@example.com</p>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src=".\img\login\ottawa.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+												<h2>Ottawa</h2>
+												<p>ottawa.ex@example.com</p>
+											</a>
+										</li>
+									</ul>
+					</div>
+
+					<div data-role="nd2tab"
+								data-tab="friends">
+							<div data-role="main" class="ui-content">
+							  <form method="post" action="demoform.asp">
+									<ul data-role="listview" data-icon="false">
+										<li data-role="list-divider">Customer Registration</li>
+									</ul>
+								  <div class="ui-field-contain">
+									<fieldset>
+									  <fieldset>
+										  <div class="ui-field-contain">
+											  <label for="rdt">Registration Date:</label>
+												  <input type="date" name="rdt" id="rdt" placeholder="mm/dd/yyyy">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="fnm">First Name:</label>
+												  <input type="text" name="fnm" id="fnm" placeholder="Type Your First Name Here...">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="lnm">Last Name:</label>
+												  <input type="text" name="lnm" id="lnm" placeholder="Type Your Last Name Here...">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="email">Email Address:</label>
+												  <input type="email" name="email" id="email"  placeholder="Type Your Email Address Here...">
+										  </div>
+									  </fieldset>
+									  <fieldset>
+									  <legend>Phone & Fax : </legend>
+										  <div class="ui-field-contain">
+											  <label for="mph">Main:</label>
+												  <input type="phone" name="mph" id="mph" placeholder="(519)-789-1234">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="cph">Cell:</label>
+												  <input type="phone" name="cph" id="cph" placeholder="(519)-789-1234">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="hph">Home:</label>
+												  <input type="phone" name="hph" id="hph" placeholder="(519)-789-1234">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="fax">Fax Number:</label>
+												  <input type="phone" name="fax" id="fax" placeholder="(519)-789-1234">
+										  </div>
+									  </fieldset>
+									  <fieldset>
+									  <legend>Address : </legend>
+										  <div class="ui-field-contain">
+											  <label for="street">Street:</label>
+												  <input type="text" name="street" id="street">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="city">City:</label>
+												  <input type="text" name="city" id="city">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="province">Province:</label>
+													<select name="province" id="province">
+													  <option value=""></option>
+													  <option value="AB">Alberta</option>
+													  <option value="BC">British Columbia</option>
+													  <option value="MB">Manitoba</option>
+													  <option value="NB">New Brunswick</option>
+													  <option value="NL">Newfoundland and Labrador</option>
+													  <option value="NS">Nova Scotia</option>
+													  <option value="ON">Ontario</option>
+													  <option value="PE">Prince Edward Island</option>
+													  <option value="QC">Quebec City</option>
+													  <option value="SK">Saskatchewan</option>
+													</select>
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="postal">Zip/Postal Code:</label>
+												  <input type="text" name="postal" id="postal" placeholder="A1B-2C3">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="country">Country:</label>
+													<select name="country" id="country">
+													  <option value=""></option>
+													  <option value="US">USA</option>
+													  <option selected="selected" value="CA">Canada</option>
+													</select>
+										  </div>
+									  </fieldset>
+									  	  <div data-role="collapsible">
+											  <h1>More Information, type in comments!</h1>
+											  <p>Apartment Number</p>
+											  <p>Unit Number</p>
+										  </div>
+									  <div class="ui-field-contain">
+										  <label for="comments">Comments:</label>
+											  <textarea name="comments" id="comments"></textarea>
+									  </div>
+									 </fieldset>
+									  <input type="Submit" data-inline="true" value="Save">
+									  <input type="Reset" data-inline="true" value="Clear">
+									  <a href="#" class="ui-btn ui-btn-inline" data-rel="back">Go Back</a>
+								</div>
+							  </form>
+							</div>
+									<ul data-role="listview" data-icon="false">
+										<li data-role="list-divider">Valuable Customers</li>
+										<li>
+											<a href="#">
+												<img src=".\img\customers\cust_1.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+												<h2>Toronto</h2>
+												<p>toronto.ex@example.com</p>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src=".\img\customers\cust_2.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+												<h2>Vancouver</h2>
+												<p>vancouver.ex@example.com</p>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src=".\img\customers\cust_3.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+												<h2>Ottawa</h2>
+												<p>ottawa.ex@example.com</p>
+											</a>
+										</li>
+									</ul>
+					</div>
+					<div data-role="nd2tab"
+								data-tab="work">
+							<ul data-role="listview" data-icon="false">
+								<!--<li data-role="list-divider">
+									Work
+								</li>-->
+								<li>
+									<a href="#" data-ajax='false'>
+										<img src="img/rooms/room_1.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Luxurious Accomodation</h2>
+										<p>All the good things in a stone bowl!</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-ajax='false'>
+										<img src="img/rooms/room_2.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Dilux Accomodation</h2>
+										<p>You're Among Friends</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-ajax='false'>
+										<img src="img/rooms/room_3.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Corporate Accomodation</h2>
+										<p>You're Among Colligues</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-ajax='false'>
+										<img src="img/rooms/room_7.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Moderate Accomodation</h2>
+										<p>You're Among Friends</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-ajax='false'>
+										<img src="img/rooms/room_8.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Exclusive Accomodation</h2>
+										<p>You're with your life partner</p>
+									</a>
+								</li>
+							</ul>
+					</div>
+
+					<div data-role="nd2tab"
+								data-tab="colors">
+							<div data-role="main" class="ui-content">
+							  <form method="post" action="demoform.asp">
+									<ul data-role="listview" data-icon="false">
+										<li data-role="list-divider">Payment Information</li>
+									</ul>
+								  <div class="ui-field-contain">
+									<fieldset>
+										  <div class="ui-field-contain">
+											  <label for="pdt">Payment Date:</label>
+												  <input type="date" name="pdt" id="pdt" placeholder="mm/dd/yyyy">
+										  </div>
+										<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+											<legend>Payment Method</legend>
+											<input type="radio" name="radio-choice-a" id="radio-choice-ab" value="choice-a" checked="checked">
+											<label for="radio-choice-ab">Cash</label>
+											<input type="radio" name="radio-choice-a" id="radio-choice-bb" value="choice-b">
+											<label for="radio-choice-bb">Card</label>
+											<input type="radio" name="radio-choice-a" id="radio-choice-cb" value="choice-c">
+											<label for="radio-choice-cb">Cheque</label>
+										</fieldset>
+										  <div class="ui-field-contain">
+											<label for="name2b">Card Holder's Name:</label>
+											<input type="text" name="name2" id="name2b" value="" data-clear-btn="true" placeholder="Type Your Name Here...">
+										  </div>
+										  <div class="ui-field-contain">
+											<label for="cardno">Card No:</label>
+											<input type="text" name="cardno" id="cardno2" value="" data-clear-btn="true" placeholder="1111-2222-3333-4444">
+										  </div>
+											<fieldset data-role="controlgroup">
+												<legend>Card Type:</legend>
+												<input type="checkbox" name="checkbox-a" id="checkbox-1ab" checked="">
+												<label for="checkbox-1ab">Debit</label>
+												<input type="checkbox" name="checkbox-a" id="checkbox-2ab">
+												<label for="checkbox-2ab">Visa</label>
+												<input type="checkbox" name="checkbox-a" id="checkbox-3ab">
+												<label for="checkbox-3ab">Mater Card</label>
+												<input type="checkbox" name="checkbox-a" id="checkbox-4ab">
+												<label for="checkbox-4ab">American Express</label>
+											</fieldset>
+										  <div class="ui-field-contain">
+											<label for="amt">Amount:</label>
+											<input type="text" name="amt" id="amt" value="" data-clear-btn="true" placeholder="Type Amount Here...">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="expdt">Card Expiry Date:</label>
+												  <input type="date" name="expdt" id="expdt"  placeholder="mm/dd/yyyy">
+										  </div>
+										  <div class="ui-field-contain">
+											  <label for="secno">Security No.:</label>
+												  <input type="text" name="secno" id="secno" placeholder="123">
+										  </div>
+										<label for="flip2b">Confirm?</label>
+										<select name="flip2" id="flip2b" data-role="flipswitch">
+											<option value="off">Yes</option>
+											<option value="on">No</option>
+										</select>
+										<div data-role='rangeslider'>
+											<label for='rangeslider1a'>Satisfaction Level:</label>
+												<input type='range' name='range1a' id='range1a' min='0' max='10' value='5'>
+											<label for='rangeslider1b'>RangeSlider:</label>
+												<input type='range' name='range1b' id='range1b' min='0' max='10' value='7'>
+										</div>
+									</fieldset>
+									  <input type="submit" data-inline="true" value="Submit">
+									  <input type="reset" data-inline="true" value="Clear">
+									  <a href="#" class="ui-btn ui-btn-inline" data-rel="back">Go Back</a>
+								  </div>
+							  </form>
+							</div>
+					</div>
+
+					<div data-role="nd2tab"
+								data-tab="food">
+						<ul data-role="listview" data-icon="false">
+								<!--<li data-role="list-divider">
+									Work
+								</li>-->
+								<li>
+									<a href="#">
+										<img src="img/fitness/fit_1.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Bath Fitness</h2>
+										<p>It's 5 layers of awesome that you can take anywhere. Hearty Beans, Shredded cheddar cheese, sour cream, guacamole and salsa - all wrapped up in a grilled flour tortilla.</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="img/fitness/fit_2.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Running Fitness</h2>
+										<p>It's 5 layers of awesome that you can take anywhere. Hearty Beans, Shredded cheddar cheese, sour cream, guacamole and salsa - all wrapped up in a grilled flour tortilla.</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="img/fitness/fit_3.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Yoga Fitness</h2>
+										<p>It's 5 layers of awesome that you can take anywhere. Hearty Beans, Shredded cheddar cheese, sour cream, guacamole and salsa - all wrapped up in a grilled flour tortilla.</p>
+									</a>
+								</li>
+							</ul>
+					</div>
+			</div>
+			<div data-role="footer" class="footer">
+				<div>CAD Program, Conestoga College</div>
+				<div>Md. Abdus Sadeque, ID: 7268063</div>
+			</div>
+		</div>
+		<script src="cordova.js"></script>
+        <script src="js/app.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.mobile.min.js"></script>
+		<script src="vendor/waves/waves.min.js"></script>
+		<script src="vendor/wow/wow.min.js"></script>
+		<script src="js/nativedroid2.js"></script>
+		<script src="nd2settings.js"></script>
+	</div>
+	</body>
+</html>
