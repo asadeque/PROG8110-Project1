@@ -6,14 +6,14 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>INFO3130</name>
+    <name>INFO8110-PROJECT1</name>
 
     <description>
-        Partially Working Prototype
+        Mobile Application Prototype
     </description>
 
     <author href="" email="">
-        Thomas Tran, Ahmad Hussain, Anton Nepsha, Nicholas Galatsis
+        Md. Andus Sadeque, ID 7268063
     </author>
 
     <!--
